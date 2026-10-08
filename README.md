@@ -1,121 +1,27 @@
-# Vimwiki + Jekyll + Github.io
+# 박성현 포트폴리오
 
-## 시작하기
+박성현의 설비 제어·검사 소프트웨어 경력을 소개하는 GitHub Pages용 정적 사이트입니다. 소개, 기술, 경력, 프로젝트 상세, 교육, 연락 섹션으로 구성했습니다.
 
-블로그 스켈레톤을 fork 하세요.
+## 로컬 실행
 
-https://github.com/johngrib/johngrib-jekyll-skeleton
+Python이 설치된 환경에서:
 
-제 블로그를 fork하는 것보다 블로그 스켈레톤을 fork하는 것을 권합니다.
-블로그를 그냥 fork 하면 제 자기소개와 일기, 에세이까지 당신의 블로그의 컨텐츠가 됩니다.
-
-* 만약 그냥 fork 하신다면 제 자기소개와 일기를 포함한 _wiki의 모든 md 파일을 삭제하고 사용하세요.
-* skeleton에 있는 문서들은 튜토리얼로 생각하고 읽어주시면 됩니다.
-
-다음 글을 읽으며 블로그의 구조를 파악하시면 운영에 도움이 될 것입니다.
-
-https://johngrib.github.io/wiki/my-wiki/
-
-## 설치하기
-
-루비가 설치되어 있지 않을 경우 루비를 설치해 주세요.
-MacOS14 버전에서 `rvm`으로 설치하는 방법을 소개해 드립니다. 
-다른 방법으로도 루비를 설치할 수 있으니, 다른 방법으로 하셔도 됩니다.  
-
-루비 버전은 [GitHub Pages Dependency versions](https://pages.github.com/versions/)을 보면 GitHub Pages에서는 `3.3.0`버전을
-사용하고 있으니 해당 버전을 설치해 줍니다.
-
-```bash
-# See also https://rvm.io/rvm/install
-$ brew install openssl libyaml readline libffi
-$ curl -sSL https://get.rvm.io | bash
-$ source ~/.rvm/scripts/rvm
-$ rvm install 3.3.0 --with-openssl-dir=$(brew --prefix openssl)
-$ rvm use 3.3.0 --default
+```sh
+python3 -m http.server 4000
 ```
 
-그다음 `bundle install`을 실행하여 의존성들을 설치합니다.
+브라우저에서 `http://127.0.0.1:4000/`을 열면 됩니다.
 
-```bash
-$ bundle install
-```
+HTML·CSS·JS 파일을 그대로 배포합니다. GitHub 저장소 `shPark95/e3pooq.github.io`의 프로젝트 페이지 주소인 `https://shpark95.github.io/e3pooq.github.io/`을 기준으로 canonical URL, sitemap, 404 경로를 작성했습니다. GitHub Pages를 사용하려면 저장소의 **Settings → Pages**에서 배포 소스를 설정해야 합니다.
 
-### Git hooks 추가하기
+## 수정 위치
 
-새로운 글을 등록하면 메타 데이터를 업데이트해 주어야 합니다. 커밋하기 전에 이를
-자동으로 될 수 있도록 Git Hooks를 추가해야 합니다.
+- `index.html`: 소개와 경력, 프로젝트의 모든 내용
+- `assets/portfolio.css`: 화면 디자인과 반응형 스타일
+- `assets/portfolio.js`: 모바일 메뉴, 기술 분류, 프로젝트 상세 창
+- `404.html`, `robots.txt`, `sitemap.xml`: 배포 경로와 검색 설정
+- `assets/favicon.svg`: 사이트 아이콘
 
-```bash
-$ cp tool/pre-commit ./.git/hooks
-```
+내용은 폴더의 `박성현이력서.pdf`를 바탕으로 작성했습니다. `Faindus.ACT`의 검사 시간 100배 단축은 이력서에 적힌 수치입니다. 이력서의 연봉, 생년, 주소, 전화번호 및 채용 제안서의 개인 정보는 공개 페이지에 포함하지 않았습니다. 이력서 PDF 자체도 배포하지 않습니다.
 
-### 노드 모듈 설치하기
-
-메타 데이터 생성을 위해서 `generateData.js`를 실행해야 합니다. 이를 실행하기
-위해서 `yamljs` 의존성을 설치해야 합니다.
-
-```bash
-$ npm install
-```
-
-## 실행하기
-
-```bash
-$ jekyll serve
-```
-
-## 글 작성하기
-
-### 새로운 카테고리 만들기
-
-카테고리가 있는 글을 작성하고 싶을 때는 카테고리를 먼저 만들어야 합니다.
-`/_wiki/category-name.md`같이 파일을 만들고 내용에는 다음을 추가해야 합니다.  
-
-이때 `layout`속성은 `category`가 되어야 합니다.
-
-```markdown
----
-layout  : category
-title   : 제목을 입력합니다.
-summary : 
-date    : 2022-10-06 00:00:00 +0900
-updated : 2022-10-06 00:00:00 +0900
-tag     : 
-toc     : true
-public  : true
-parent  : index
-latex   : false
----
-
-* TOC
-{:toc}
-```
-
-### 위키에 글 등록하기
-
-위키를 작성할 때는 `/_wiki` 폴더 아래에 마크다운으로 파일을 작성합니다. 만약
-카테고리 아래에 글을 작성하고 싶을 경우에는 카테고리 이름으로 폴더를 만들고
-파일을 추가합니다. 예를 들어 `/_wiki/category-name/document.md`로 만들 수 있습니다.
-`layout`은 `wiki`가 되어야 합니다. `parent`는 상위 카테고리 이름을 작성해야
-합니다.  
-
-만약 상위 카테고리가 없을 경우에는 `parent`에 `index`를 입력합니다.
-
-```markdown
----
-layout  : wiki
-title   : 제목을 적습니다
-date    : 2022-10-08 11:23:00 +0900
-updated : 2022-10-08 11:23:00 +0900
-tag     : 
-toc     : true
-public  : true
-parent  : category-name
-latex   : false
----
-
-* TOC
-{:toc}
-
-내용을 적습니다.
-```
+원본 Jekyll 블로그 스켈레톤의 글, 작성자 정보, 이미지, 생성 스크립트는 저장소에서 정리했습니다. 이전 버전이 필요하면 Git 기록에서 복구할 수 있습니다. `.nojekyll` 파일이 GitHub Pages의 Jekyll 빌드를 건너뛰게 합니다.

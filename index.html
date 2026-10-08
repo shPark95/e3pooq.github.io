@@ -1,69 +1,260 @@
----
-layout: home
-adsense: false
-regenerate: true
----
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5f0">
+  <meta name="description" content="C#과 .NET을 기반으로 장비 통신, 제어 UI, 검사 데이터를 연결하는 소프트웨어 개발자 박성현의 포트폴리오입니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:title" content="박성현 | 설비 제어·검사 소프트웨어 개발자">
+  <meta property="og:description" content="장비 통신, 제어 UI, 검사 데이터를 연결하는 소프트웨어 개발자 박성현의 포트폴리오">
+  <meta property="og:url" content="https://shpark95.github.io/e3pooq.github.io/">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://shpark95.github.io/e3pooq.github.io/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/portfolio.css">
+  <script src="assets/portfolio.js" defer></script>
+  <title>박성현 | 설비 제어·검사 소프트웨어 개발자</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
 
-<div class="blog-face">
-    <div>
-        <H3>
-            <a href="https://github.com/vimwiki/vimwiki">Vimwiki</a>
-            +
-            <a href="https://jekyllrb.com/">Jekyll</a>
-            +
-            <a href="https://pages.github.com/">Github.io</a>
-        </H3>
+  <nav class="site-nav" aria-label="주요 메뉴">
+    <a class="brand" href="#top" aria-label="박성현 포트폴리오 맨 위로">
+      <span class="brand-mark">PSH<span class="brand-dot">.</span></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">소개</a>
+      <a href="#skills">기술</a>
+      <a href="#experience">경력</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#education">교육</a>
     </div>
-        기억 보조용 위키
-    <div>
-    </div>
-    <div>
-        <a href="/blog/">블로그</a>
-        /
-        <a href="/tag/">태그</a>
-        <p>단축키 도움말: ctrl + h</p>
-    </div>
-    <div class="contact">
-{% if site.github_username %}
-        <a href="https://github.com/{{ site.github_username }}">GitHub</a>
-{% endif %}
-{% if site.twitter_username %}
-        <a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
-{% endif %}
-{% if site.email %}
-        <a href="mailto:{{ site.email }}">Email</a>
-{% endif %}
-        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
-    </div>
-</div>
-<div>
-    <H3 class="indent">최근 변경된 문서</H3>
-    <ul class="post-list">
-{% assign documents = site.wiki | sort: 'updated' | reverse %}
-{% for doc in documents limit: 30 %}
-    {% if doc.public == true and doc.title != 'wiki'%}
-        <li>
-            <div class="post-item">
-                <a class="post-link" href="{{ doc.url | prepend: site.baseurl }}">
-                    <div class="post-meta">
-                        {{ doc.updated | date: "%Y.%m.%d" }}
-                        -
-                        {{ doc.title }}
-                    </div>
-                    <div class="post-excerpt">{{ doc.summary }}</div>
-                    <ul class="tag-list">
-                        <li class="post-tag">
-                            {{ doc. tag }}
-                        </li>
-                    </ul>
-                </a>
+    <a class="nav-contact" href="#contact">연락하기 <span aria-hidden="true">↗</span></a>
+    <button class="nav-toggle" type="button" aria-label="메뉴 열기" aria-controls="navLinks" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main id="main">
+    <header class="hero" id="top">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow hero-eyebrow"><span class="status-dot"></span> EQUIPMENT SOFTWARE ENGINEER</p>
+          <p class="hero-name">안녕하세요, 박성현입니다.</p>
+          <h1>현장의 신호를<br><em>신뢰할 수 있는</em><br>소프트웨어로.</h1>
+          <p class="hero-lede">C#과 .NET을 중심으로 설비 통신, 제어 UI, 검사 데이터를 연결합니다. 현장에서 확인한 문제를 코드로 해결하고 장비가 안정적으로 동작하도록 만듭니다.</p>
+          <div class="hero-actions">
+            <a class="button button--primary" href="#projects">프로젝트 보기 <span aria-hidden="true">↗</span></a>
+            <a class="button button--ghost" href="https://github.com/shPark95" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-proof" aria-label="대표 경험">
+            <div><strong>100×</strong><span>초음파 검사 시간 단축<br><small>이력서 기재 성과</small></span></div>
+            <div><strong>3년+</strong><span>검사·설비 SW 실무 경험</span></div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="장비 신호, 통신, 검사 데이터, 제어 화면을 연결하는 개념도">
+          <div class="visual-topline"><span class="mini-led"></span><span>FIELD / SOFTWARE</span><span>01 — 04</span></div>
+          <div class="visual-panel">
+            <div class="visual-panel__heading">
+              <span>PROCESS SIGNAL</span><span class="visual-live">● LIVE SYSTEM</span>
             </div>
-        </li>
-    {% endif %}
-{% endfor %}
-    </ul>
-    <h4>
-        <a href="/recent/">전체 문서 리스트 보기 ({{ site.wiki | size | minus: 1 }} 항목)</a>
-    </h4>
-</div>
-{% include createLink.html %}
+            <svg class="signal-chart" viewBox="0 0 500 190" role="img" aria-label="센서 신호가 그래프로 표현된 일러스트">
+              <defs><linearGradient id="signalFill" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#db603c" stop-opacity=".28"/><stop offset="1" stop-color="#db603c" stop-opacity="0"/></linearGradient></defs>
+              <path class="chart-grid" d="M0 36H500M0 76H500M0 116H500M0 156H500M50 0V190M150 0V190M250 0V190M350 0V190M450 0V190"/>
+              <path d="M0 151 L33 147 L56 152 L80 151 L102 139 L124 145 L144 80 L158 130 L184 143 L205 134 L226 132 L240 48 L256 126 L278 121 L304 124 L328 88 L345 106 L370 101 L392 58 L410 91 L432 84 L456 91 L480 65 L500 72 L500 190 L0 190 Z" fill="url(#signalFill)"/>
+              <path class="signal-line" d="M0 151 L33 147 L56 152 L80 151 L102 139 L124 145 L144 80 L158 130 L184 143 L205 134 L226 132 L240 48 L256 126 L278 121 L304 124 L328 88 L345 106 L370 101 L392 58 L410 91 L432 84 L456 91 L480 65 L500 72"/>
+              <circle cx="240" cy="48" r="6" fill="#db603c"/><circle cx="392" cy="58" r="6" fill="#db603c"/>
+            </svg>
+            <div class="visual-readout"><span>SENSOR INPUT</span><span>PLC / DAQ</span><span>CONTROL UI</span></div>
+          </div>
+          <div class="flow-card flow-card--left"><span class="flow-icon">01</span><span><b>장비와 연결</b><small>DeviceNet · Serial · UDP</small></span></div>
+          <div class="flow-card flow-card--right"><span class="flow-icon">02</span><span><b>데이터를 해석</b><small>신호 처리 · 이미지 검사</small></span></div>
+          <div class="visual-bottom"><span>HARDWARE <i>→</i> SOFTWARE <i>→</i> STABLE OPERATION</span><span class="crosshair" aria-hidden="true">⌖</span></div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#about"><span>SCROLL TO EXPLORE</span><span aria-hidden="true">↓</span></a>
+    </header>
+
+    <section class="section section--about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">01 / ABOUT</p>
+          <h2 id="about-title">장비와 소프트웨어 사이에서<br>문제를 끝까지 확인합니다.</h2>
+          <p>반도체·PCB·초음파 검사 장비의 개발과 현장 셋업을 경험했습니다. 제어와 통신을 구현하는 일부터 오퍼레이터가 사용하는 화면, 검사 데이터의 저장과 확인까지 이어지는 흐름을 다룹니다.</p>
+        </div>
+        <div class="strength-grid">
+          <article class="strength-card">
+            <div class="strength-number">01 <span aria-hidden="true">↗</span></div>
+            <div class="strength-art strength-art--connect" aria-hidden="true"><span>PLC</span><i></i><span>SW</span><i></i><span>UI</span></div>
+            <h3>설비 통신과 제어</h3>
+            <p>DeviceNet PLC I/O Mapping, TwinCAT I/O, Serial 기반 SRZ Heater, UDP 장비 통신을 구현·연동했습니다.</p>
+          </article>
+          <article class="strength-card">
+            <div class="strength-number">02 <span aria-hidden="true">↗</span></div>
+            <div class="strength-art strength-art--inspect" aria-hidden="true"><span class="scan-box"><span></span></span><span class="scan-caption">INSPECTION DATA</span></div>
+            <h3>검사 데이터와 사용자 화면</h3>
+            <p>초음파 수집 데이터 저장·신호 처리·이미지 확보와 PCB 불량 분석 기능, WPF·WinForms UI를 개발했습니다.</p>
+          </article>
+          <article class="strength-card">
+            <div class="strength-number">03 <span aria-hidden="true">↗</span></div>
+            <div class="strength-art strength-art--field" aria-hidden="true"><span class="field-dot"></span><span class="field-line"></span><span class="field-dot field-dot--end"></span><span class="field-label">SETUP → STABILIZE</span></div>
+            <h3>현장 셋업과 안정화</h3>
+            <p>신규 사이트 셋업, 검사 알고리즘 튜닝, 현장 이슈 대응, 오퍼레이터 매뉴얼과 안정성 리포트 작성까지 수행했습니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--skills" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <p class="eyebrow">02 / TECH STACK</p>
+          <h2 id="skills-title">현장에서 사용한 기술</h2>
+          <p>실무에 사용한 기술과 교육 과정에서 학습한 기술을 구분했습니다.</p>
+        </div>
+        <div class="skill-filters" role="group" aria-label="기술 분류">
+          <button type="button" class="skill-filter is-active" data-filter="all" aria-pressed="true">전체</button>
+          <button type="button" class="skill-filter" data-filter="app" aria-pressed="false">앱 개발</button>
+          <button type="button" class="skill-filter" data-filter="control" aria-pressed="false">통신·제어</button>
+          <button type="button" class="skill-filter" data-filter="data" aria-pressed="false">검사·데이터</button>
+          <button type="button" class="skill-filter" data-filter="study" aria-pressed="false">교육 과정</button>
+        </div>
+        <div class="skill-grid" id="skillGrid">
+          <div class="skill-tile" data-category="app"><span class="skill-icon">C#</span><strong>C# / .NET</strong><small>실무</small></div>
+          <div class="skill-tile" data-category="app"><span class="skill-icon">WF</span><strong>WinForms</strong><small>실무</small></div>
+          <div class="skill-tile" data-category="app"><span class="skill-icon">WP</span><strong>WPF</strong><small>실무</small></div>
+          <div class="skill-tile" data-category="app"><span class="skill-icon">C++</span><strong>C++ / MFC</strong><small>실무</small></div>
+          <div class="skill-tile" data-category="control"><span class="skill-icon">PLC</span><strong>DeviceNet</strong><small>실무</small></div>
+          <div class="skill-tile" data-category="control"><span class="skill-icon">I/O</span><strong>TwinCAT</strong><small>실무</small></div>
+          <div class="skill-tile" data-category="control"><span class="skill-icon">↔</span><strong>Serial / UDP</strong><small>실무</small></div>
+          <div class="skill-tile" data-category="control"><span class="skill-icon">AX</span><strong>Motion Control</strong><small>실무</small></div>
+          <div class="skill-tile" data-category="data"><span class="skill-icon">DAQ</span><strong>DAQ / 신호 처리</strong><small>실무</small></div>
+          <div class="skill-tile" data-category="data"><span class="skill-icon">SQL</span><strong>SQL / MDB</strong><small>실무</small></div>
+          <div class="skill-tile" data-category="data"><span class="skill-icon">T4</span><strong>T4 코드 생성</strong><small>실무</small></div>
+          <div class="skill-tile" data-category="study"><span class="skill-icon">PY</span><strong>Python</strong><small>SW 정글</small></div>
+          <div class="skill-tile" data-category="study"><span class="skill-icon">C</span><strong>C / 시스템</strong><small>SW 정글</small></div>
+          <div class="skill-tile" data-category="study"><span class="skill-icon">OS</span><strong>Pintos OS</strong><small>SW 정글</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--experience" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">03 / EXPERIENCE</p>
+          <h2 id="experience-title">현장으로 이어진 경력</h2>
+          <p>장비 제어, 검사 데이터, 현장 안정화를 중심으로 경험을 쌓아 왔습니다.</p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-marker">01</div>
+            <div class="timeline-date">2026.06 — 현재</div>
+            <div class="timeline-body"><div class="timeline-title"><h3>비아트론</h3><span>SW팀 · 프로</span></div>
+              <p>디스플레이 열처리 장비의 제어 소프트웨어와 코드 생성 자동화 도구를 개발·유지보수합니다.</p>
+              <ul><li>Visionox 프로젝트의 DeviceNet PLC·TwinCAT I/O Mapping, Heater·MFC·APC 제어 연동</li><li>WinForms 기반 Robot·Chamber 제어 및 Batch Chamber 유지보수</li><li>기존 코드와 DB 이력을 분석해 자동화 도구 오류 수정, T4 기반 C# 코드 생성</li></ul>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-marker">02</div>
+            <div class="timeline-date">2025.07 — 2026.04</div>
+            <div class="timeline-body"><div class="timeline-title"><h3>파인더스</h3><span>기술연구실 · 연구원</span></div>
+              <p>휴대용·설비형 초음파 검사 장비의 통신, 데이터 수집, 축 제어, 사용자 화면을 개발했습니다.</p>
+              <ul><li>제조사 SDK를 분석해 UDP DAQ·Serial Pulser 제어 프로토타입 구현</li><li>Motion·Pulser·DAQ를 통합하고 검사 데이터 저장·신호 처리를 구현</li><li>Faindus.ACT에서 수작업 검사 대비 검사 시간을 100배 단축</li></ul>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-marker">03</div>
+            <div class="timeline-date">2022.09 — 2024.05</div>
+            <div class="timeline-body"><div class="timeline-title"><h3>에이티아이</h3><span>PKG SW · 주임</span></div>
+              <p>PCB 검사장비의 신규 사이트 셋업과 이미지 기반 불량 분석 기능을 개발했습니다.</p>
+              <ul><li>검사 파라미터 설정, 알고리즘 튜닝, 신규 프로세스 UI 개발</li><li>현장 이슈에 24시간 내 대응하고 안정성 테스트·품질 검증 리포트 작성</li><li>고객별 요구사항을 설계부터 테스트·배포까지 반영하고 매뉴얼 문서화</li></ul>
+            </div>
+          </article>
+          <article class="timeline-item timeline-item--minor">
+            <div class="timeline-marker">04</div>
+            <div class="timeline-date">2022.01 — 2022.03</div>
+            <div class="timeline-body"><div class="timeline-title"><h3>에스이티</h3><span>FC설비기술팀 · 사원</span></div>
+              <p>장비 PM, 설비 Conversion, 장비 이력 관리 업무를 수행했습니다.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--projects" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <p class="eyebrow">04 / SELECTED WORK</p>
+          <h2 id="projects-title">프로젝트 경험</h2>
+          <p>문제와 구현 내용이 확인되는 프로젝트를 골랐습니다. 카드를 열면 세부 역할을 볼 수 있습니다.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card project-card--featured">
+            <div class="project-top"><span class="project-index">01 / EQUIPMENT CONTROL</span><span class="project-symbol" aria-hidden="true">⌁</span></div>
+            <div class="project-main"><p class="project-company">비아트론 · 2026.09 — 현재</p><h3>디스플레이 열처리 장비<br>제어·셋업</h3><p>Visionox V5 FNA·PIC 장비의 통신과 제어 소프트웨어를 연동하고 현장 셋업을 안정화했습니다.</p></div>
+            <div class="project-footer"><div class="tags"><span>DeviceNet</span><span>TwinCAT</span><span>C#</span></div><button type="button" data-dialog="visionox" aria-label="디스플레이 열처리 장비 프로젝트 자세히 보기">자세히 보기 <span aria-hidden="true">↗</span></button></div>
+          </article>
+          <article class="project-card">
+            <div class="project-top"><span class="project-index">02 / INSPECTION SYSTEM</span><span class="project-symbol" aria-hidden="true">◉</span></div>
+            <div class="project-main"><p class="project-company">파인더스 · 2025.11 — 2026.04</p><h3>Faindus.ACT<br>초음파 검사 시스템</h3><p>축·Pulser·DAQ를 통합하고 신호를 이미지 데이터로 처리해 수작업 대비 검사 시간을 100배 단축했습니다.</p></div>
+            <div class="project-footer"><div class="tags"><span>DAQ</span><span>신호 처리</span><span>WinForms</span></div><button type="button" data-dialog="act" aria-label="Faindus.ACT 프로젝트 자세히 보기">자세히 보기 <span aria-hidden="true">↗</span></button></div>
+          </article>
+          <article class="project-card">
+            <div class="project-top"><span class="project-index">03 / DEVICE PROTOTYPE</span><span class="project-symbol" aria-hidden="true">▥</span></div>
+            <div class="project-main"><p class="project-company">파인더스 · 2025.07 — 2025.10</p><h3>Faindus.SAI<br>휴대용 초음파 장비</h3><p>하드웨어 제조사 SDK를 바탕으로 UDP DAQ·Serial Pulser 통신과 데이터 저장 기능을 구현했습니다.</p></div>
+            <div class="project-footer"><div class="tags"><span>UDP</span><span>Serial</span><span>WPF</span></div><button type="button" data-dialog="sai" aria-label="Faindus.SAI 프로젝트 자세히 보기">자세히 보기 <span aria-hidden="true">↗</span></button></div>
+          </article>
+          <article class="project-card">
+            <div class="project-top"><span class="project-index">04 / FIELD SETUP</span><span class="project-symbol" aria-hidden="true">⊞</span></div>
+            <div class="project-main"><p class="project-company">에이티아이 · 2022.09 — 2023.07</p><h3>PCB 검사장비<br>신규 사이트 셋업</h3><p>장비 파라미터·검사 알고리즘을 튜닝하고 신규 공정 UI와 현장 대응 체계를 구축했습니다.</p></div>
+            <div class="project-footer"><div class="tags"><span>PCB 검사</span><span>WPF</span><span>MFC</span></div><button type="button" data-dialog="pcb" aria-label="PCB 검사장비 셋업 프로젝트 자세히 보기">자세히 보기 <span aria-hidden="true">↗</span></button></div>
+          </article>
+          <article class="project-card">
+            <div class="project-top"><span class="project-index">05 / VISION ANALYSIS</span><span class="project-symbol" aria-hidden="true">◎</span></div>
+            <div class="project-main"><p class="project-company">에이티아이 · 2023.07 — 2024.05</p><h3>이미지 기반<br>불량 분석 기능</h3><p>고객사별 검사·분석 요구사항을 WinForms 기능으로 구현하고 테스트·배포까지 맡았습니다.</p></div>
+            <div class="project-footer"><div class="tags"><span>영상 분석</span><span>WinForms</span><span>C#</span></div><button type="button" data-dialog="defect" aria-label="불량 분석 기능 프로젝트 자세히 보기">자세히 보기 <span aria-hidden="true">↗</span></button></div>
+          </article>
+          <article class="project-card">
+            <div class="project-top"><span class="project-index">06 / DEVELOPER TOOL</span><span class="project-symbol" aria-hidden="true">⌘</span></div>
+            <div class="project-main"><p class="project-company">비아트론 · 2026.06 — 2026.08</p><h3>Babamba<br>코드 생성 자동화</h3><p>기존 코드와 DB 이력을 분석해 오류를 수정하고 T4 템플릿 기반 C# 코드 생성을 유지보수했습니다.</p></div>
+            <div class="project-footer"><div class="tags"><span>SQL</span><span>T4</span><span>C#</span></div><button type="button" data-dialog="babamba" aria-label="Babamba 프로젝트 자세히 보기">자세히 보기 <span aria-hidden="true">↗</span></button></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--education" id="education" aria-labelledby="education-title">
+      <div class="container education-grid">
+        <div class="section-heading">
+          <p class="eyebrow">05 / EDUCATION</p>
+          <h2 id="education-title">기초를 다지고,<br>실무로 넓혔습니다.</h2>
+          <p>전자재료 전공에서 설비와 공정의 기초를 익히고, 시스템 프로그래밍 교육으로 소프트웨어 기반을 넓혔습니다.</p>
+        </div>
+        <div class="education-list">
+          <article class="education-item"><span class="education-period">2024.08 — 2024.12</span><div><h3>SW 정글 사관학교 9기</h3><p>Python 자료구조·알고리즘, C 기반 Red-Black Tree·malloc·proxy, Pintos 운영체제 및 웹 프레임워크 팀 프로젝트</p></div></article>
+          <article class="education-item"><span class="education-period">2022.05 — 2022.08</span><div><h3>에이티아이 사내 교육</h3><p>C·C++·C#과 반도체 비전 검사 설비의 제어·검사 소프트웨어 개발 및 유지보수 교육</p></div></article>
+          <article class="education-item"><span class="education-period">2015.03 — 2021.02</span><div><h3>광운대학교 전자재료공학과</h3><p>전자소자·회로·반도체 공정 학습, TFT 소자 제작 캡스톤 프로젝트</p></div></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="contact" id="contact">
+    <div class="container contact-grid">
+      <div><p class="eyebrow">LET'S CONNECT</p><h2>장비가 움직이는 현장에서,<br>함께 문제를 해결하겠습니다.</h2><p>프로젝트와 경험에 관해 이야기하고 싶다면 GitHub에서 연결해 주세요.</p></div>
+      <div class="contact-actions"><a class="button button--light" href="https://github.com/shPark95" target="_blank" rel="noopener noreferrer">GitHub 프로필 <span aria-hidden="true">↗</span></a><a class="contact-repo" href="https://github.com/shPark95/e3pooq.github.io" target="_blank" rel="noopener noreferrer">이 사이트의 코드 보기 <span aria-hidden="true">↗</span></a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="copyrightYear">2026</span> 박성현</span><a href="#top">맨 위로 ↑</a></div>
+  </footer>
+
+  <dialog class="project-dialog" id="dialog-visionox" aria-labelledby="visionox-title"><div class="dialog-head"><span class="eyebrow">비아트론 · 2026.09 — 현재</span><button class="dialog-close" type="button" aria-label="닫기">×</button></div><h2 id="visionox-title">디스플레이 열처리 장비 제어·셋업</h2><p class="dialog-intro">Visionox V5 FNA·PIC 프로젝트에서 설비 통신과 제어 SW를 연동하고 셋업을 수행했습니다.</p><div class="dialog-columns"><div><h3>맡은 일</h3><ul><li>DeviceNet PLC Module 및 TwinCAT I/O Mapping</li><li>Position Board, SRZ Heater, MFC, APC 제어 연동</li><li>WinForms 기반 Robot·Chamber 제어 및 Batch Chamber 유지보수</li><li>외주업체 인원 관리와 셋업 안정화</li></ul></div><div><h3>기술</h3><p>DeviceNet · TwinCAT · Serial · C# · WinForms</p><h3>결과</h3><p>장비 셋업과 제어 소프트웨어 안정화에 기여했습니다.</p></div></div></dialog>
+  <dialog class="project-dialog" id="dialog-act" aria-labelledby="act-title"><div class="dialog-head"><span class="eyebrow">파인더스 · 2025.11 — 2026.04</span><button class="dialog-close" type="button" aria-label="닫기">×</button></div><h2 id="act-title">Faindus.ACT 초음파 검사 시스템</h2><p class="dialog-intro">축·Pulser·DAQ를 하나의 검사 흐름으로 연결한 통합 솔루션을 개발했습니다.</p><div class="dialog-columns"><div><h3>맡은 일</h3><ul><li>아진엑스텍 축, Ritec Pulser, NI DAQ 제어 연동</li><li>Packet 기반 수집 데이터 저장 구현</li><li>신호 처리를 통한 이미지 데이터 확보</li><li>WinForms 기반 사용자 UI 구성</li></ul></div><div><h3>기술</h3><p>C# · WinForms · Motion Control · DAQ · 신호 처리</p><h3>결과</h3><p>기존 수작업 초음파 검사 대비 검사 시간을 100배 단축했습니다.</p></div></div></dialog>
+  <dialog class="project-dialog" id="dialog-sai" aria-labelledby="sai-title"><div class="dialog-head"><span class="eyebrow">파인더스 · 2025.07 — 2025.10</span><button class="dialog-close" type="button" aria-label="닫기">×</button></div><h2 id="sai-title">Faindus.SAI 휴대용 초음파 장비</h2><p class="dialog-intro">제조사 SDK 문서를 분석해 휴대용 초음파 검사 프로토타입을 만들었습니다.</p><div class="dialog-columns"><div><h3>맡은 일</h3><ul><li>UDP 기반 외주사 DAQ 보드 제어</li><li>Serial 기반 외주사 Pulser 제어</li><li>DAQ 수집 데이터 저장 및 통신 로그 작성</li><li>WPF 사용자 화면 구성</li></ul></div><div><h3>기술</h3><p>C# · WPF · UDP · Serial · DAQ</p><h3>결과</h3><p>하드웨어 제조사 SDK를 바탕으로 동작하는 SW 프로토타입을 개발했습니다.</p></div></div></dialog>
+  <dialog class="project-dialog" id="dialog-pcb" aria-labelledby="pcb-title"><div class="dialog-head"><span class="eyebrow">에이티아이 · 2022.09 — 2023.07</span><button class="dialog-close" type="button" aria-label="닫기">×</button></div><h2 id="pcb-title">PCB 검사장비 신규 사이트 셋업</h2><p class="dialog-intro">신규 공정 프로세스 도입에 맞춰 검사장비를 설정하고 현장 안정화를 지원했습니다.</p><div class="dialog-columns"><div><h3>맡은 일</h3><ul><li>장비별 파라미터 셋업과 이미지 기반 검사 알고리즘 튜닝</li><li>신규 프로세스 UI 기능 개발</li><li>현장 이슈에 24시간 내 대응</li><li>오퍼레이터 매뉴얼, 안정성 테스트 및 고객 품질 검증 리포트 작성</li></ul></div><div><h3>기술</h3><p>C# · WPF · C++ · MFC · 이미지 검사</p><h3>결과</h3><p>신규 사이트 셋업 기간 단축과 안정화에 기여했습니다.</p></div></div></dialog>
+  <dialog class="project-dialog" id="dialog-defect" aria-labelledby="defect-title"><div class="dialog-head"><span class="eyebrow">에이티아이 · 2023.07 — 2024.05</span><button class="dialog-close" type="button" aria-label="닫기">×</button></div><h2 id="defect-title">이미지 기반 불량 분석 기능</h2><p class="dialog-intro">고객사별 불량 분석 요구에 맞춰 검사 소프트웨어 기능을 개선했습니다.</p><div class="dialog-columns"><div><h3>맡은 일</h3><ul><li>요구사항 정리부터 설계·구현·테스트·배포까지 수행</li><li>고객별 불량 분석 정리표 기획 및 구현</li><li>현장 피드백 반영과 반복 개선</li><li>오퍼레이터 교육 매뉴얼 작성</li></ul></div><div><h3>기술</h3><p>C# · WinForms · 영상 기반 불량 분석</p><h3>결과</h3><p>고객별 요청에 맞춰 장비 기능의 유연성과 확장성을 높였습니다.</p></div></div></dialog>
+  <dialog class="project-dialog" id="dialog-babamba" aria-labelledby="babamba-title"><div class="dialog-head"><span class="eyebrow">비아트론 · 2026.06 — 2026.08</span><button class="dialog-close" type="button" aria-label="닫기">×</button></div><h2 id="babamba-title">Babamba 코드 생성 자동화</h2><p class="dialog-intro">기존 코드와 DB 이력을 분석해 코드 생성 도구의 오류를 수정하고 유지보수했습니다.</p><div class="dialog-columns"><div><h3>맡은 일</h3><ul><li>기존 자동화 도구의 오류 원인 파악과 수정</li><li>Microsoft DB 대상 SQL 작업</li><li>Visual Studio Wizard Tool·T4 기반 C# 코드 자동 생성 유지보수</li></ul></div><div><h3>기술</h3><p>C# · SQL · T4 · Visual Studio</p><h3>결과</h3><p>코드 생성 자동화 도구의 오류를 수정했습니다.</p></div></div></dialog>
+</body>
+</html>

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://johngrib.github.io/sitemap.xml
+Sitemap: https://shpark95.github.io/e3pooq.github.io/sitemap.xml
